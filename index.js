@@ -40,12 +40,16 @@ function canviaFons(tipus) {
 
         colorFondo = "rgb(" + red + "," + green + "," + blue + ")";
 
+            if (red < 95){
+
+                colorTexto = "white";
+            } else {
+                colorTexto = "black";
+            }
 
     } else if (tipus == "clear") { 
     colorFondo = "white";
     colorTexto = "black";
-    
-
     }
     _id("cos").style.backgroundColor = colorFondo;
     _id("cos").style.color = colorTexto;
