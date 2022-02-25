@@ -14,8 +14,8 @@ function factorial() {
             resultado *= i;
             operacion += i;
 
-            if (i>1) operacion+="*";
-        } 
+            if (i > 1) operacion += "*";
+        }
         _id("resultatFactorial").innerHTML = resultado;
         _id("operacionsFactorial").innerHTML = operacion;
 
@@ -30,7 +30,23 @@ function calculaIVA() {
 
 function canviaFons(tipus) {
 
+    var colorFondo;
+    var colorTexto;
+
+    if (tipus == "random") {
+        var red = Math.floor(Math.random() * 255);
+        var blue = red;
+        var green = red;
+
+        colorFondo = "rgb(" + red + "," + green + "," + blue + ")";
 
 
+    } else if (tipus == "clear") { 
+    colorFondo = "white";
+    colorTexto = "black";
     
+
+    }
+    _id("cos").style.backgroundColor = colorFondo;
+    _id("cos").style.color = colorTexto;
 }
